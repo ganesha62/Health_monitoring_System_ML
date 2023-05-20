@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Heart Disease Prediction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://img.freepik.com/free-vector/heart-human-anatomy-biology-organ-body-system-health-care-medical-hand-drawn-cartoon-art-illustration_56104-955.jpg?w=2000');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+    }
+    form {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form textarea {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    #header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    
+    #main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 80px);
+    }
+    
+    .form-container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-container h2 {
+      margin: 0;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .form-container form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .form-container .form-group {
+      flex-basis: calc(50% - 10px);
+      margin-bottom: 20px;
+    }
+    
+    .form-container .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .form-container .form-group input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .form-container input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      margin-top: 10px;
+    }
+    
+    .form-container input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>Heart Disease Prediction</h1>
+  </div>
+  
+
+  <div id="main">
+    <div class="form-container">
+      <h2>Predict HEART Disease</h2>
+      <form action="/heart/result2">
+        <div class="form-group">
+            <label for="thalach">Maximum heart rate </label>
+            <input type="text" id='thalach' required name="thalach"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="oldpeak">ST depression induced by exercise relative to rest </label>
+            <input type="text" id='oldpeak' required name="oldpeak"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="cp">Chest pain type — <br>Value 1: typical angina —<br> Value 2: atypical angina —<br> Value 3: non-anginal pain — <br>Value 4: asymptomatic</label>
+            <input type="text" id='cp' required name="cp"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="ca"><br><br>Number of major vessels (0-3) colored by flourosopy<br><br><br></label>
+            <input type="text" id="ca" required name="ca"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="exang">Exercise induced angina (1 = yes; 0 = no)</label>
+            <input type="text" id="exang" required name="exang"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="chol">Serum Cholestoral in mg/dl:</label>
+            <input type="text" id="chol" required name="chol"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="text" id="age" required name="age"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="trestbps">resting blood pressure (in mm Hg on admission to the hospital)</label>
+            <input type="text" id="trestbps" required name="trestbps"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="slope">  the slope of the peak exercise ST segment —<br> Value 1: upsloping —<br> Value 2: flat — <br>Value 3: downsloping</label>
+            <input type="text" id="slope" required name="slope"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="sex"> <br><br>Sex (1 = male; 0 = female)<br><br></label>
+            <input type="text" id="sex" required name="sex"> <br> <br>
+        </div>
+        <input type="submit" value="Submit">
+        <input type="button" value="Back to Home" onclick="window.location.href='mainpage'">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+

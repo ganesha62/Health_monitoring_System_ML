@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kidney Disease Prediction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://media.istockphoto.com/photos/human-kidney-cross-section-on-scientific-background-picture-id1003372082?k=20&m=1003372082&s=612x612&w=0&h=pRPCiJE2ljtMNP_T-du_9IjL-29GDt3Z9piLPIEO07o=');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+    }
+    form {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form textarea {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    #header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    
+    #main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 80px);
+    }
+    
+    .form-container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-container h2 {
+      margin: 0;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .form-container form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .form-container .form-group {
+      flex-basis: calc(50% - 10px);
+      margin-bottom: 20px;
+    }
+    
+    .form-container .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .form-container .form-group input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .form-container input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      margin-top: 10px;
+    }
+    
+    .form-container input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>Kidney Disease Prediction</h1>
+  </div>
+  
+  <div id="main">
+    <div class="form-container">
+      <h2>Predict Kidney Disease</h2>
+      <form action="/kidney/result">
+        <div class="form-group">
+            <label for="wc">WBC Count:</label>
+            <input type="text" id='wc' required name="wc"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="bgr">Blood Glucose Random:</label>
+            <input type="text" id="bgr" required name="bgr"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="bu">Blood Urea:</label>
+            <input type="text" id="bu" required name="bu"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="sc">Serum Creatinine:</label>
+            <input type="text" id="sc" required name="sc"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="pcv">Packed Cell Volume:</label>
+            <input type="text" id="pcv" required name="pcv"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="al">Albumin:</label>
+            <input type="text" id="al" required name="al"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="wc">Haemoglobin:</label>
+            <input type="text" id="hemo" required name="hemo"> <br> <br>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" id="age" required name="age"> <br> <br>
+        </div>
+        <input type="submit" value="Submit">
+        <input type="button" value="Back to Home" onclick="window.location.href='mainpage'">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
